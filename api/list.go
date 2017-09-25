@@ -35,5 +35,10 @@ func main() {
         })
     })
 
+    r.GET("/read/:path", func(c *gin.Context) {
+        path := c.Param("path")
+
+        c.File(path)
+    })
     r.Run() // listen and serve on 0.0.0.0:8080
 }

@@ -26,12 +26,3 @@ func GetList(path string) ([]FileInfo, error) {
 
     return lists, err;
 }
-
-func GetFile(path string) {
-    content, err := ioutil.ReadFile(path)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    fmt.Printf("File contents: %s", content)
-}
